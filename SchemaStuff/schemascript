@@ -1,0 +1,9 @@
+-- Plain Sum
+A = load 'input' using PigStorage(',');
+-- this will generate all columns after the first one
+B = foreach A generate $1..;
+--Suppose you need to cast the
+C = FOREACH A generate (chararray)$0,(int)$1,(int)$2,(chararray)$3,(chararray)$4;
+
+dump C;
+

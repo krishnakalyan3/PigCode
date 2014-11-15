@@ -1,4 +1,4 @@
--- Plain Sum
+-- Load 
 A = load 'input' using PigStorage(',');
 -- this will generate all columns after the first one
 B = foreach A generate $1..;
